@@ -3,7 +3,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goalify/Featuers/GoalCreation/goalcreate.dart';
 import 'package:goalify/Featuers/GoalOverveiw/veiw/goaloverveiw.dart';
-import 'package:goalify/Featuers/GoalTracking/goaltracking.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,12 +22,9 @@ Future<void> main() async {
   final bool isFirstRun = prefs.getBool('isFirstRun') ?? true;
 
   runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (context) => BlocProvider(
-        create: (context) => GoalsCubit(),
-        child: MyApp(isFirstRun: isFirstRun),
-      ),
+    BlocProvider(
+      create: (context) => GoalsCubit(),
+      child: MyApp(isFirstRun: isFirstRun),
     ),
   );
 
