@@ -126,8 +126,7 @@ class _GoalOverviewPageState extends State<GoalOverviewPage> {
                         borderRadius: BorderRadius.circular(15),
                         child: Container(
                           decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 246, 233, 252),
-                            
+                            color: const Color.fromARGB(255, 246, 233, 252),
                             borderRadius: BorderRadius.circular(15),
                           ),
                           padding: const EdgeInsets.all(16.0),
@@ -142,8 +141,7 @@ class _GoalOverviewPageState extends State<GoalOverviewPage> {
                                     goal.title,
                                     style: const TextStyle(
                                       fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                     ),
                                   ),
                                   const SizedBox(height: 8),
@@ -151,7 +149,7 @@ class _GoalOverviewPageState extends State<GoalOverviewPage> {
                                     goal.category,
                                     style: const TextStyle(
                                       fontSize: 16,
-                                      color: Colors.white70,
+                                      color: Colors.black,
                                     ),
                                   ),
                                 ],
@@ -159,10 +157,9 @@ class _GoalOverviewPageState extends State<GoalOverviewPage> {
                               IconButton(
                                 icon: const Icon(
                                   Icons.delete,
-                                  color: Colors.white,
+                                  color: Colors.red,
                                 ),
                                 onPressed: () {
-                                  // استدعاء دالة الحذف من الـ Cubit
                                   context.read<GoalsCubit>().deleteGoal(index);
                                 },
                               ),

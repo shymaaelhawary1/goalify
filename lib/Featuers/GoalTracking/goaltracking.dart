@@ -22,7 +22,6 @@ class _GoalTrackingPageState extends State<GoalTrackingPage> {
     _loadMilestones();
   }
 
-  // تحميل المعالم المخزنة من SharedPreferences
   Future<void> _loadMilestones() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? milestonesData = prefs.getString('milestones');
@@ -33,8 +32,6 @@ class _GoalTrackingPageState extends State<GoalTrackingPage> {
       });
     }
   }
-
-  // حفظ المعالم إلى SharedPreferences
   Future<void> _saveMilestones() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String encodedData = jsonEncode(goals);
@@ -46,7 +43,7 @@ class _GoalTrackingPageState extends State<GoalTrackingPage> {
     setState(() {
       goals.add({"title": milestone, "completed": false});
     });
-    _saveMilestones(); // حفظ المعلم الجديد
+    _saveMilestones();
   }
 
   @override
@@ -121,7 +118,6 @@ class _GoalTrackingPageState extends State<GoalTrackingPage> {
             ),
           ),
           const SizedBox(height: 20),
-          // تعديل لعرض الـ title الممرر من الـ constructor
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
@@ -219,7 +215,6 @@ class _GoalTrackingPageState extends State<GoalTrackingPage> {
                     setState(() {
                       milestone['completed'] = value!;
                     });
-                    _saveMilestones(); // حفظ التغييرات
                   },
                 );
               },
