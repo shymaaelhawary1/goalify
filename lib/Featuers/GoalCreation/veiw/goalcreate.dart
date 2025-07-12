@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goalify/Featuers/GoalCreation/formCreation.dart';
+import 'package:goalify/Featuers/GoalCreation/veiw/formCreation.dart';
 
 class GoalCreationPage extends StatelessWidget {
   final List<Map<String, dynamic>> popularGoals = [

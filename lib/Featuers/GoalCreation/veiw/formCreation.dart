@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:goalify/Featuers/GoalOverveiw/veiw/Home.dart';
 import 'package:goalify/Featuers/GoalOverveiw/veiw/goaloverveiw.dart';
-import 'package:goalify/Featuers/GoalCreation/goalcreate.dart';
+import 'package:goalify/Featuers/GoalCreation/veiw/goalcreate.dart';
 import 'package:goalify/Featuers/GoalOverveiw/GoalController/cubit/goals_cubit.dart';
 
 class FormCreation extends StatefulWidget {

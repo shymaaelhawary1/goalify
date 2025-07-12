@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
-import '../../GoalTracking/goaltracking.dart';
+import '../../GoalTracking/view/goaltracking.dart';
 import '../GoalController/cubit/goals_cubit.dart';
 
 class GoalOverviewPage extends StatefulWidget {

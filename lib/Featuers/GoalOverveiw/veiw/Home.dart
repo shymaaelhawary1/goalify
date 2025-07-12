@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goalify/Featuers/GoalCreation/goalcreate.dart';
+import 'package:goalify/Featuers/GoalCreation/veiw/goalcreate.dart';
 import 'package:goalify/Featuers/GoalOverveiw/veiw/goaloverveiw.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
